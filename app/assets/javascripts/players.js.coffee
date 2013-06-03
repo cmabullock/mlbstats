@@ -6,5 +6,5 @@ jQuery ->
 		spaginationType: "full_numbers"
 		bProcessing: true
 		bServerSide: true
-		aaSorting: [[2,"desc"]] // default sort is the third column (AVG) Descending
-		sAjaxSource: $("#players").data('source') // grab the source from the data-source attribute
+		aaSorting: [[2,"desc"]] 
+		sAjaxSource: $("#players").data('source') 
