@@ -1,0 +1,69 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :given_name %><br />
+    <%= f.text_field :given_name %>
+  </div>
+  <div class="field">
+    <%= f.label :games %><br />
+    <%= f.number_field :games %>
+  </div>
+  <div class="field">
+    <%= f.label :games_started %><br />
+    <%= f.number_field :games_started %>
+  </div>
+  <div class="field">
+    <%= f.label :at_bats %><br />
+    <%= f.number_field :at_bats %>
+  </div>
+  <div class="field">
+    <%= f.label :runs %><br />
+    <%= f.number_field :runs %>
+  </div>
+  <div class="field">
+    <%= f.label :hits %><br />
+    <%= f.number_field :hits %>
+  </div>
+  <div class="field">
+    <%= f.label :home_runs %><br />
+    <%= f.number_field :home_runs %>
+  </div>
+  <div class="field">
+    <%= f.label :rbi %><br />
+    <%= f.text_field :rbi %>
+  </div>
+  <div class="field">
+    <%= f.label :steals %><br />
+    <%= f.number_field :steals %>
+  </div>
+  <div class="field">
+    <%= f.label :sacrifice_flies %><br />
+    <%= f.number_field :sacrifice_flies %>
+  </div>
+  <div class="field">
+    <%= f.label :walks %><br />
+    <%= f.number_field :walks %>
+  </div>
+  <div class="field">
+    <%= f.label :hit_by_pitch %><br />
+    <%= f.number_field :hit_by_pitch %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
