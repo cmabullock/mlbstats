@@ -67,7 +67,7 @@ private
 			"runs",
 			"steals",
 			# If division by zero is going to happen, set it to zero (use at_bats again since if that is zero, so is everything else)
-			"((hits+walks+hit_by_pitch)/(CASE at_bats WHEN 0 THEN NULL ELSE (CAST(at_bats as float)+walks+hit_by_pitch+sacrifice_flies) END))"
+			"(CASE at_bats WHEN 0 THEN 0 ELSE(hits+walks+hit_by_pitch)/(CAST(at_bats as float)+walks+hit_by_pitch+sacrifice_flies) END)"
 		]
 		#choose the option above based on the column index fed in
     columns[params[:iSortCol_0].to_i]
